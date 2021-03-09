@@ -1,5 +1,5 @@
 # Penalized-Linear-Regression
-## The wine taste data set comes from the UC Irvine data repository 
+The wine taste data set comes from the UC Irvine data repository 
 (http://archive.ics.uci.edu/ml/datasets/Wine+Quality).1
  The data set 
 contains chemical analyses for 1,599 wines along with average taste scores 
