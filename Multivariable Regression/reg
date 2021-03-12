@@ -1,0 +1,25 @@
+# keep col names in a list
+names = []
+for i in data.columns:
+    names.append(i)
+    
+# Separating features and labels 
+features, labels = data.iloc[:, :-1], data.iloc[:, [-1]]
+
+# Converting labels to float
+labels["quality"] = labels["quality"].astype(float)
+
+# Normalizing features and labels
+
+## create a scaler object
+std_scaler = StandardScaler()
+std_scaler
+## fit and transform the features
+features = pd.DataFrame(std_scaler.fit_transform(features))
+## fit and transform the labels
+labels = pd.DataFrame(std_scaler.fit_transform(labels))
+
+# Convert to np array for input to sklearn packages
+Y = numpy.array(labels)
+Y = Y.flatten()
+X = numpy.array(features)
